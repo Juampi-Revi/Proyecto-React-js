@@ -1,0 +1,64 @@
+.card-product-container{
+    width: 22.4rem;
+    height: 42.5rem;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 12%);
+    margin: 2rem;
+    border-radius:1rem;
+}
+.card-product-img{
+    height: 22.4rem;
+    width: 22.4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.img-card-product{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    max-height: 22.4rem;
+    max-width: 22.4rem;
+    border-radius:1rem;
+}
+.info-card-product{
+    border-top: 0.1rem solid rgba(0,0,0,.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.title-card-product{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.29;
+}
+.price-card-product{
+    font-size: 2rem;
+    margin-top:2rem;
+}
+.estado-card-product{
+    color: rgba(0,0,0,.55);
+    font-weight: 400;
+    margin-top: 0.6rem;
+    font-size:1.6rem;
+}
+.button-card-product-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.button-card-product{
+    background-color: #3483fa;
+    border-color: transparent;
+    color: #fff;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}

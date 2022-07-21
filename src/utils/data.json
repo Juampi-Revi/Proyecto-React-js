@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "title":"Samsung Galaxy Z Flip3", 
+        "price": 159999,
+        "stock": 36,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_740721-MLA47886660486_102021-F.webp",
+        "category": "Celulares",
+        "estado": "Nuevo",
+        "description": "Dispositivo liberado, compatible con redes 5G. Doble camara trasera 12Mpx/12Mpx, camara delantera 10Mpx. Bateria 3300mAh con carga inalambrica. Memoria interna de 128GB."
+    },
+    {
+        "id": 2,
+        "title": "Samsung Galaxy A33",
+        "price": 91999,
+        "stock": 981,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_847906-MLA49763193559_042022-F.webp",
+        "category": "Celulares",
+        "estado": "Nuevo",
+        "description":"Dispositivo liberado. Memoria interna de 128GB. 6GB de RAM"
+    },
+    {
+        "id": 3,
+        "title": "Motorola G51",
+        "price": 52999,
+        "stock": 2273,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_959500-MLA50302263673_062022-F.webp",
+        "category": "Celulares",
+        "estado": "Nuevo",
+        "description":"Dispositivo liberado. Compatible con 5G. Bateria de 5000mAh. Camara Delantera 13Mpx. Memoria interna de 128GB. 6GB de RAM"
+    },
+    {
+        "id": 4,
+        "title": "Notebook Hp 245",
+        "price": 134999,
+        "stock": 495,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_608302-MLA50679358307_072022-F.webp",
+        "category": "Notebooks",
+        "estado": "Nuevo",
+        "description":"Procesador Amd Ryzen 3 G8. Disco de 1TB. 4GB RAM. Pantalla 14"
+    },
+    {
+        "id": 5,
+        "title": "Notebook Dell Inspiron 3515",
+        "price": 153599,
+        "stock": 10,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_906990-MLA50606566094_072022-F.webp",
+        "category": "Notebooks",
+        "estado": "Nuevo",
+        "description":"Procesador Amd Ryzen 7 3700U. Ssd 512GB. 8GB RAM. Pantalla 15,6"
+    },
+    {
+        "id": 6,
+        "title": "Notebook Exo Smart M33",
+        "price": 62499,
+        "stock": 81,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_758306-MLA47762969111_102021-F.webp",
+        "category": "Notebooks",
+        "estado": "Nuevo",
+        "description":"Intel Celeron N4020. Ssd 64GB. 4GB RAM. Pantalla Full HD 14."
+    },
+    {
+        "id": 7,
+        "title": "Aspirador Trapeadora Robot Atma Atar21c1dh",
+        "price": 53999,
+        "stock": 19,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_999724-MLA48636149279_122021-F.webp",
+        "category": "Electrodomesticos",
+        "estado": "Nuevo",
+        "description":"Deja los espacios libres de pelo de mascotas. Tiene sensor de obstaculos y anticaida. Incluye control remoto."
+    },
+    {
+        "id": 8,
+        "title": "Lavarropas Autom Samsung Frontal Ww90j5410gs",
+        "price": 149149,
+        "stock": 37,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_988512-MLA31116206742_062019-F.webp",
+        "category": "Electrodomesticos",
+        "estado": "Nuevo",
+        "description":"65% de ahorro energetico. Eficiente, durable y silencioso. Lavados excelentes con agua fría."
+    },
+    {
+        "id": 9,
+        "title": "Multiprocesadora KitchenAid KFC3516",
+        "price": 19999,
+        "stock": 205,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_640929-MLA41713906305_052020-F.webp",
+        "category": "Electrodomesticos",
+        "estado": "Nuevo",
+        "description":"Capacidad de 3.5 tazas. Traba de seguridad anti-accidentes. Cuchillas de acero inoxidable. Practica y facíl de usar."
+    },
+    {
+        "id": 10,
+        "title": "Freidora eléctrica Moulinex Easy pro 3L",
+        "price": 18190,
+        "stock": 58,
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_979103-MLA42228612143_062020-F.webp",
+        "category": "Electrodomesticos",
+        "estado": "Nuevo",
+        "description":"Capacidad de hasta 3 litros de aceite. Elaborada de acero inoxidable. Preparaciones deliciosas en poco tiempo."
+    }
+]

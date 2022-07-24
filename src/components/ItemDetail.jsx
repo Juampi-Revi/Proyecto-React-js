@@ -1,7 +1,14 @@
 import '../stylesheet/ItemDetail.css';
+import ItemCount from './ItemCount';
+import {useState} from 'react';
+import {Link} from 'react-router-dom'
 
 function ItemDetail ({ data }){
+    const [compra, setCompra] = useState(0);
     const { title, price, stock, pictureUrl, estado, categoria, description } = data;
+    const onAdd = (compra) => {
+        setCompra(compra)
+    }
     return(
         <div className='item-detail-container'>
             <section className='item-detail-container-img'>
@@ -13,7 +20,10 @@ function ItemDetail ({ data }){
                 <h2 className='item-detail-precio'>$ { price }</h2>
                 <p className='item-detail-descripcion'>{ description }</p>
                 <p className='item-detail-stock'> Disponibles: <strong>{ stock } </strong></p>
-                <button className='item-detail-button'>Comprar ahora</button>
+                {compra === 0 ? <ItemCount stock= {stock} onAdd = {onAdd}/> : <h1 className='titulo-compra'> ¡Sus {compra} productos se agregaron al carrito! </h1> }
+                <Link className='item-detail-button' to = '/cart'>
+                    <button className='item-detail-buttons'>Comprar ahora</button>
+                </Link>
             </section>
         </div>
     )

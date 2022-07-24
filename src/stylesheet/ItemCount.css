@@ -1,0 +1,49 @@
+.item-count-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.item-count-container-input{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-count-input{
+    padding: 0.3rem;
+    padding-left: 1rem;
+    border-radius:0.3rem;
+    border:0.1rem solid #ccc;
+}
+.item-count-button-input{
+    padding:0.2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3483fa;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left:0.3rem;
+}
+.item-count-button{
+    background-color: rgba(65,137,230,.15);
+    border-color: transparent;
+    color: #3483fa;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    margin-top:2rem;
+    width: 50%;
+}
+.item-count-container-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

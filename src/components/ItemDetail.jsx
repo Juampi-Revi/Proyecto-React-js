@@ -1,14 +1,20 @@
 import '../stylesheet/ItemDetail.css';
 import ItemCount from './ItemCount';
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 import {Link} from 'react-router-dom'
+import {CartContext} from '../context/CartContext'
+
 
 function ItemDetail ({ data }){
-    const [compra, setCompra] = useState(0);
+    const [compra, setCompra] = useState(0)
+    const { setNewItem} = useContext(CartContext);
     const { title, price, stock, pictureUrl, estado, categoria, description } = data;
     const onAdd = (compra) => {
-        setCompra(compra)
+        setCompra(compra);
+        data.compra = compra;
+        setNewItem(data);   
     }
+    
     return(
         <div className='item-detail-container'>
             <section className='item-detail-container-img'>

@@ -5,11 +5,9 @@ import {CartContext} from '../context/CartContext';
 function CartWidget (){
     const {carrito} = useContext(CartContext);
     return(
-        <div>
-            <a href="#">
+        <div className="CartWidget-container">
                 <img src={require('../assets/cart-icon.png')} alt=" icono carrito" />
-                <span>{carrito.length}</span>
-            </a>
+            <span className='contador-uidades-carrito'>{carrito.length}</span>
         </div>
     )
 };

@@ -1,0 +1,11 @@
+.CartWidget-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contador-uidades-carrito{
+    font-size: 2rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    
+}

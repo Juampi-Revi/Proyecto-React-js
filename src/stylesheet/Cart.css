@@ -1,0 +1,34 @@
+.contenedor-general-carrito{
+    display: flex;
+    justify-content:center;
+}
+.contenedor-carrito{
+    margin-top: 5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.2rem 0 rgb(0 0 0 / 30%);
+    background-color: #fff;
+    padding: 64px;
+    width: 80%;
+}
+.titulo-carrito{
+    font-size:1.8rem;
+    margin-left: 5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+.contenedor-boton-carrito{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-carrito-terminar{
+    font-size:1.7rem;
+    color: #fff;
+    width: 20%;
+    background-color: #3483fa;
+    border-color: transparent;
+    color: #fff;
+    padding:1.3rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    margin-top:1rem;
+}

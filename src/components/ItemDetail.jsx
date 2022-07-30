@@ -7,12 +7,13 @@ import {CartContext} from '../context/CartContext'
 
 function ItemDetail ({ data }){
     const [compra, setCompra] = useState(0)
-    const { setNewItem} = useContext(CartContext);
+    const {  agregarAlCarrito} = useContext(CartContext);
     const { title, price, stock, pictureUrl, estado, categoria, description } = data;
     const onAdd = (compra) => {
         setCompra(compra);
-        data.compra = compra;
-        setNewItem(data);   
+        agregarAlCarrito(data, compra);
+        //data.compra = compra;
+        //setCarrito((prevState) => [...prevState, data])
     }
     
     return(

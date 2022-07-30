@@ -5,26 +5,24 @@ export const CartContext = createContext();
 
 const Provider = (props) => {
     const [carrito, setCarrito] = useState([]);
-    const [newItem, setNewItem] = useState();
-    const isInCart = (setNewItem) => {
-        return carrito.find(e=>{return e.id === setNewItem.id ? true : false})
-    };
-    const clear = () => {setCarrito([])};
-    const addToCart = (item) => {
-        let existe = isInCart();
-        if (existe > -1){
-            carrito[item.id].compra += item.compra;
-            setCarrito(carrito);
+    const agregarAlCarrito = (item, cantidad) => {
+        let nuevoCarrito;
+        let producto = carrito.find (e=> e.id === item.id);
+        if (producto) {
+            producto.compra += cantidad;
+            nuevoCarrito = [...carrito];
         } else {
-            setCarrito((prevState)=> [...prevState, item]);
+            producto = {...item, compra: cantidad};
+            nuevoCarrito = [...carrito, producto];
         }
-    };
-    const removeItem = (ItemId) => {
-        carrito.splice(isInCart(ItemId), 1);
-        setCarrito(carrito);
-    };
+        setCarrito(nuevoCarrito);
+    }
+    const vaciarCarrito = () => setCarrito ([]);
+    const existeEnElCarrito = (id) => carrito.find(e => e.id === id) ? true : false;
+    const eliminarDelCarrito = (id) => setCarrito(carrito.filter(e => e.id !== id));
+    
     return (
-        <CartContext.Provider value={{ carrito, setCarrito, newItem, setNewItem, clear, addToCart, removeItem}}>
+        <CartContext.Provider value={{ carrito, agregarAlCarrito, vaciarCarrito, existeEnElCarrito, eliminarDelCarrito }}>
             {props.children}
         </CartContext.Provider>
     );

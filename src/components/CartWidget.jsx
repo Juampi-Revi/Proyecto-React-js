@@ -7,7 +7,7 @@ function CartWidget (){
     return(
         <div className="CartWidget-container">
                 <img src={require('../assets/cart-icon.png')} alt=" icono carrito" />
-            <span className='contador-uidades-carrito'>{carrito.length}</span>
+            <span className='contador-uidades-carrito'>{carrito.length>= 1 ? carrito.length : ''}</span>
         </div>
     )
 };

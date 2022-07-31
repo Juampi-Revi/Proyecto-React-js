@@ -27,10 +27,11 @@ function ItemDetail ({ data }){
                 <h2 className='item-detail-precio'>$ { price }</h2>
                 <p className='item-detail-descripcion'>{ description }</p>
                 <p className='item-detail-stock'> Disponibles: <strong>{ stock } </strong></p>
-                {compra === 0 ? <ItemCount stock= {stock} onAdd = {onAdd}/> : <h1 className='titulo-compra'> ¡Sus {compra} productos se agregaron al carrito! </h1> }
-                <Link className='item-detail-button' to = '/cart'>
-                    <button className='item-detail-buttons'>Comprar ahora</button>
-                </Link>
+                {compra === 0 ? <ItemCount stock= {stock} onAdd = {onAdd}/> : 
+                    <Link className='item-detail-button' to = '/cart'>
+                        <button className='item-detail-buttons'>Terminar compra</button>
+                    </Link>}
+                
             </section>
         </div>
     )

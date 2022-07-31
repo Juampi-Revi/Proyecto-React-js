@@ -4,7 +4,7 @@
     margin-top:2rem;
     align-items: center;
     padding: 2rem;
-    border-bottom: 0.1rem solid #ccc;
+    ;
 }
 .img-item-cart{
     height:10rem;
@@ -41,14 +41,7 @@ input[type=number]::-webkit-outer-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
-.titulo-condicional{
-    line-height: 1.25;
-    font-size: 3rem;
-    color: #666;
-    font-weight: inherit;
-    margin: 3rem;
-    text-align: center;
-}
+
 .item-cart-button-input{
     padding:0.2rem;
     width: 2rem;
@@ -74,4 +67,17 @@ margin: 0;
     font-size: 26px;
     font-weight: 400;
     line-height: 1em;
+}
+.eliminar-articulo-carrito{
+    color: #3483fa;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 1rem;
+    font-size: 1.5rem;
+    margin-left: 20rem;
+    margin-bottom: 2rem;
+    width: 5%;
+}
+.eliminar-articulo-carrito:hover{
+    color:red;
 }

@@ -1,31 +1,37 @@
 import '../stylesheet/ItemListContainer.css';
 import {useState, useEffect} from "react";
-import data from '../utils/data.json';
 import ItemList from './ItemList';
 import { useParams } from "react-router-dom";
 import Spinner from './Spinner';
+import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 
 function ItemListContainer (){
     const [producto, setProducto] = useState([]);
     const [loading, setLoading] = useState(false);
     const { id } = useParams();
 
-    let promises = new Promise ((resolve, reject) => {
-        setTimeout(() => 
-            resolve(data),
-        2000);
-    });
-    useEffect(()=>{
+    /*useEffect(() => {
         setLoading(true);
-        promises.then((res)=>{
-            if(id){
-                setProducto(res.filter((el)=> el.category === id))
-            } else {
-                setProducto(res);
-            }
-        setLoading(false)
+        const db = getFirestore();
+        const itemsCollection = collection(db, "productos");
+        getDocs(itemsCollection).then((snapshot) => {
+            const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+            setProducto(data);
+            setLoading(false);
         });
-    },[id])
+    }, [id]);*/
+    useEffect(() => {
+        console.log(id)
+        setLoading(true);
+        const db = getFirestore();
+        const itemsCollection = collection(db, "productos");
+        const itemsFilter = id ? query(itemsCollection, where('category', '==', id)) : itemsCollection;
+            getDocs(itemsFilter).then((snapshot)=>{
+                const data = snapshot.docs.map(doc=>({id:doc.id, ...doc.data()}));
+                setProducto(data);
+                setLoading(false);
+            });
+    }, [id])
     if (loading) return <Spinner/>
     return (
         <div className='contenedor-items'>

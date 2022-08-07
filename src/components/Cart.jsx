@@ -19,18 +19,19 @@ function Cart () {
             <div className='contenedor-carrito'>
                 <h1 className='titulo-carrito'>Carrito ({carrito.length})</h1>
                 <hr />
-                    {carrito.length === 0 ?
+                {carrito.length === 0 ?
                     <div className='contenedor-carrito-vacio'>
                         <h1 className='titulo-condicional'>El carrito esta vacío</h1>
                         <p className='parrafo-condicional'>¿No sabés qué comprar? ¡Miles de productos te esperan!</p> 
                         <Link className='boton-carrito-vacio' to='/'>Iniciar compra</Link>
                     </div> 
-                    
-                    : carrito.map((e)=> <ItemCart data={e}/>)}
-                {carrito.length >=1 ? <div>
-                    <h2>Precio total $ {totalPrice}</h2>
-                </div> : <h2> </h2>}
-                
+                : carrito.map((e)=> <ItemCart data={e}/>)}
+                <hr />
+                {carrito.length >=1 ? 
+                    <div className='contenedor-precio-total-carrito'>
+                        <h2 className='precio-total-carrito'>Precio total </h2>
+                        <p className='precio-total-carrito-numeros'>$ {totalPrice}</p>
+                    </div> : <h2> </h2>}
                 <hr />
                 {carrito.length >= 1 ? <div className='contenedor-boton-carrito'>
                     <button className='btn-carrito-vaciar'type = 'button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button>

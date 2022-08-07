@@ -77,3 +77,21 @@
     text-align: center;
     text-decoration: none;
 }
+.precio-total-carrito{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1;
+    color: #333;
+}
+.contenedor-precio-total-carrito{
+    display: flex;
+    margin:2rem;
+    justify-content:flex-end;
+    margin-right: 4rem;
+}
+.precio-total-carrito-numeros{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1;
+    color: #333;
+}

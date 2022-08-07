@@ -31,7 +31,6 @@ function ItemDetail ({ data }){
                     <Link className='item-detail-button' to = '/cart'>
                         <button className='item-detail-buttons'>Terminar compra</button>
                     </Link>}
-                
             </section>
         </div>
     )

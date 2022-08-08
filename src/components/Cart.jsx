@@ -5,8 +5,15 @@ import {CartContext} from '../context/CartContext';
 import {Link} from 'react-router-dom';
 
 function Cart () {
-    const {carrito, vaciarCarrito} = useContext(CartContext);
+    const {carrito, vaciarCarrito, setOrder} = useContext(CartContext);
     const [totalPrice, setTotalPrice] = useState(0);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const inputs = document.querySelectorAll('.input-carrito');
+        const data = Array.from(inputs).map((input, index)=> input.value);
+        setOrder( {nombre: data[0], mail: data[1], telefono: data[2]}, totalPrice)
+    }
+    
     useEffect(() => {
         let total = 0;
         carrito.forEach((item) => {
@@ -33,9 +40,17 @@ function Cart () {
                         <p className='precio-total-carrito-numeros'>$ {totalPrice}</p>
                     </div> : <h2> </h2>}
                 <hr />
-                {carrito.length >= 1 ? <div className='contenedor-boton-carrito'>
-                    <button className='btn-carrito-vaciar'type = 'button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
-                    <button type='button' className='btn-carrito-terminar'>Terminar Compra</button>
+                {carrito.length >= 1 ? <div >
+                    <form className='contenedor-form-carrito' onSubmit={handleSubmit}>
+                        <h2>Para completar su compra, deje aqui sus datos</h2>
+                        <input className='input-carrito' type="text" placeholder="Nombre y Apellido" require/>
+                        <input className='input-carrito' type="email" placeholder="Correo electronico" require/>
+                        <input className='input-carrito' type="tel" placeholder="Numero telefonico" require/>
+                    <div className='contenedor-boton-carrito'>
+                        <button className='btn-carrito-vaciar'type = 'button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
+                        <button type='submit' className='btn-carrito-terminar' >Terminar Compra</button>
+                    </div>
+                    </form>
                 </div> : <div></div> }
                 
             </div>

@@ -18,7 +18,8 @@
 }
 .contenedor-boton-carrito{
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    width: 100%;
 }
 .btn-carrito-terminar{
     font-size:1.7rem;
@@ -94,4 +95,34 @@
     font-size: 26px;
     line-height: 1;
     color: #333;
+}
+.contenedor-form-carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.contenedor-form-carrito h2{
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 30%;
+    text-align: center;
+}
+.contenedor-form-carrito input{
+    font-size: 16px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0.8125em 0.75em;
+    border: 0;
+    background: transparent;
+    color: rgba(0,0,0,.9);
+    font-family: inherit;
+    text-align: center;
+    width: 30%;
+    margin-bottom:2rem;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 25%);
+    border-radius: 0.375em;
+    background-color: #fff;
 }

@@ -10,18 +10,7 @@ function ItemListContainer (){
     const [loading, setLoading] = useState(false);
     const { id } = useParams();
 
-    /*useEffect(() => {
-        setLoading(true);
-        const db = getFirestore();
-        const itemsCollection = collection(db, "productos");
-        getDocs(itemsCollection).then((snapshot) => {
-            const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-            setProducto(data);
-            setLoading(false);
-        });
-    }, [id]);*/
     useEffect(() => {
-        console.log(id)
         setLoading(true);
         const db = getFirestore();
         const itemsCollection = collection(db, "productos");

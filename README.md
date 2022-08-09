@@ -1,7 +1,7 @@
 # Mercado fake
 
 Mercado Fake es un proyecto de estudio de React js, realizado para el curso de React js de CoderHouse.
-El nombre surge de querer clonar en cierta manera la pagina de Mercado Libre.
+El nombre surge de querer clonar en cierta manera la pagina de Mercado Libre. En el mismo intentamos seguir el curso normal de una compra en cualquier ecommers.
 
 ## How to run the proyect:
 
@@ -19,3 +19,13 @@ El nombre surge de querer clonar en cierta manera la pagina de Mercado Libre.
 - boostrap: tambien importamos boostrap para el uso de iconos.
 - firebase: creamos una base de datos externa en firebase, tanto para usar info de la base, como para guardar datos de las compras.
 - sweetalert2: utilizamos para los mensajes de alerta la libreria "sweetalert".
+
+## En este proyecto utilizamos:
+
+Para la realizacion de este proyecto pusimos en practica conceptos de React js :
+
+1. Creacion e implementacion de componentes.
+2. Utilizacion de hooks. Tales como useStates, o React-router-dom para rutear toda nuestra app. 
+3. Ciclos de vida de nuestros componentes. 
+4. Creacion y utilizacion de Context. 
+5. Tambien la utilizacion de firebase (que no es propio de React, pero en mi caso personal es la primera vez que lo uso).

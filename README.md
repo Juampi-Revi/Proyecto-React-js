@@ -16,3 +16,6 @@ El nombre surge de querer clonar en cierta manera la pagina de Mercado Libre.
 - @mui/material: como libreria para tomar un spinner loading.
 - componentes jsx: para generar contenido dinamico.
 - archivos css: para darle estilos al proyecto. 
+- boostrap: tambien importamos boostrap para el uso de iconos.
+- firebase: creamos una base de datos externa en firebase, tanto para usar info de la base, como para guardar datos de las compras.
+- sweetalert2: utilizamos para los mensajes de alerta la libreria "sweetalert".

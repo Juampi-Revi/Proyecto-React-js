@@ -3,15 +3,25 @@ import ItemCount from './ItemCount';
 import {useContext, useState} from 'react';
 import {Link} from 'react-router-dom'
 import {CartContext} from '../context/CartContext'
-
+import Swal from 'sweetalert2';
 
 function ItemDetail ({ data }){
     const [compra, setCompra] = useState(0)
     const {  agregarAlCarrito} = useContext(CartContext);
     const { title, price, stock, pictureUrl, estado, categoria, description } = data;
+    const mostrarAlerta = ()=>{
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'El producto se agrego al carrito',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
     const onAdd = (compra) => {
         setCompra(compra);
         agregarAlCarrito(data, compra);
+        mostrarAlerta();
         //data.compra = compra;
         //setCarrito((prevState) => [...prevState, data])
     }

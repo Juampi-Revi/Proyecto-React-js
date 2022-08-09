@@ -1,6 +1,6 @@
 import {createContext, useState} from 'react';
 import {getFirestore, collection, addDoc, writeBatch, getDocs, query, where, documentId} from 'firebase/firestore';
-
+import Swal from 'sweetalert2';
 export const CartContext = createContext();
 
 const Provider = (props) => {
@@ -18,7 +18,6 @@ const Provider = (props) => {
         const batch = writeBatch(db);
         const withoutStock = [];
         const idList = carrito.map((el) => el.id);
-        console.log(idList);
         const productosCollection = collection(db, 'productos');
         const docsResponse = await getDocs(
             query(productosCollection, where(documentId(), "in", idList))
@@ -35,11 +34,17 @@ const Provider = (props) => {
         if (withoutStock.length === 0) {
             const addResponse = await addDoc(orderCollection, order);
             batch.commit();
-            alert(`Your oder number is: ${addResponse.id}`);
+            Swal.fire({
+                title: `El numero de su compra es: ${addResponse.id}`,
+                icon: 'success'
+            })
+            setCarrito([]);
         } else {
-            alert(
-                "The purchase wasn't completed. There aren't enough items in stock"
-            );
+            Swal.fire({
+                title: 'La compra no se completó',
+                text: "No hay suficientes artículos en stock",
+                icon: 'warning',
+            })
         };
     };
 
@@ -62,7 +67,10 @@ const Provider = (props) => {
             producto.compra++;
             nuevoCarrito = [...carrito];
         } else {
-            alert('No puede seguir comprando, supera nuestro stock')
+            Swal.fire({
+                title: 'No hay suficientes artículos en stock',
+                icon: 'warning',
+            })
             nuevoCarrito(...carrito)
         }
         setCarrito(nuevoCarrito);
@@ -85,7 +93,7 @@ const Provider = (props) => {
     const eliminarDelCarrito = (id) => setCarrito(carrito.filter(e => e.id !== id));
     
     return (
-        <CartContext.Provider value={{ carrito, agregarAlCarrito, vaciarCarrito, existeEnElCarrito, eliminarDelCarrito, sumarCantidad, restarCantidad, setOrder }}>
+        <CartContext.Provider value={{ carrito, agregarAlCarrito, vaciarCarrito, existeEnElCarrito, eliminarDelCarrito, sumarCantidad, restarCantidad, setOrder, setCarrito }}>
             {props.children}
         </CartContext.Provider>
     );

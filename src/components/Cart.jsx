@@ -40,7 +40,7 @@ function Cart () {
                     </div> : <h2> </h2>}
                 <hr />
                 {carrito.length >= 1 ? <div >
-                    <form className='contenedor-form-carrito' onSubmit={handleSubmit}>
+                    <form className='contenedor-form-carrito' onSubmit = {handleSubmit}>
                         <h2>Para completar su compra, deje aqui sus datos</h2>
                         <input className='input-carrito' type="text" placeholder="Nombre y Apellido" required/>
                         <input className='input-carrito' type="email" placeholder="Correo electronico" required/>
@@ -48,7 +48,7 @@ function Cart () {
                         <input className='input-carrito' type="tel" placeholder="Numero telefonico" required/>
                     <div className='contenedor-boton-carrito'>
                         <button className='btn-carrito-vaciar'type = 'button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
-                        <button type='submit' className='btn-carrito-terminar' disabled={data[1] !== data[2]}>Terminar Compra</button>
+                        <button type='submit' className='btn-carrito-terminar' disabled={data[1] != data[2]}>Terminar Compra</button>
                     </div>
                     </form>
                 </div> : <div></div> }

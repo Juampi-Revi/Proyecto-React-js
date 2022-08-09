@@ -5,6 +5,7 @@ export const CartContext = createContext();
 
 const Provider = (props) => {
     const [carrito, setCarrito] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
     //genero una nueva coleccion "orders"
     const setOrder = async  (buyerData, totalPrice) => {
         const db = getFirestore();
@@ -93,7 +94,7 @@ const Provider = (props) => {
     const eliminarDelCarrito = (id) => setCarrito(carrito.filter(e => e.id !== id));
     
     return (
-        <CartContext.Provider value={{ carrito, agregarAlCarrito, vaciarCarrito, existeEnElCarrito, eliminarDelCarrito, sumarCantidad, restarCantidad, setOrder, setCarrito }}>
+        <CartContext.Provider value={{ setTotalPrice, totalPrice,carrito, agregarAlCarrito, vaciarCarrito, existeEnElCarrito, eliminarDelCarrito, sumarCantidad, restarCantidad, setOrder, setCarrito }}>
             {props.children}
         </CartContext.Provider>
     );
